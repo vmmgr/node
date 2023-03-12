@@ -47,7 +47,7 @@ var copyCmd = &cobra.Command{
 		if err != nil {
 			request.SendServer(controller, uuid, 0, "", err)
 		}
-		request.SendServer(controller, uuid, 100, "", nil)
+		request.SendServer(controller, uuid, 100, "success", nil)
 
 		log.Println("end")
 	},

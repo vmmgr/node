@@ -14,3 +14,8 @@ sudo apt install cloud-image-utils
 zfs set primarycache=metadata tank
 zfs set secondarycache=metadata tank
 ```
+
+### Build
+```
+GOOS=linux GOARCH=amd64 go build .
+```
