@@ -46,8 +46,9 @@ var copyCmd = &cobra.Command{
 		err = req.FileCopy(src, dest)
 		if err != nil {
 			request.SendServer(controller, uuid, 0, "", err)
+		} else {
+			request.SendServer(controller, uuid, 100, "success", nil)
 		}
-		request.SendServer(controller, uuid, 100, "success", nil)
 
 		log.Println("end")
 	},
